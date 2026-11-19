@@ -1,0 +1,25 @@
+Primary text: none in Library
+Headline: Tiivi – yksilöllisesti räätälöidyt ikkuna- ja oviratkaisut vaativiin tarpeisiin.
+CTA: Book Now
+Goal: Quote request (päätelty tekstistä, CTA:sta ja näkyvästä linkistä/kuvasta; Metan todellinen optimointitavoite ei ole julkinen)
+Ad Library: https://www.facebook.com/ads/library/?id=1211962417654236
+Advertiser Library: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=FI&view_all_page_id=345572485526585
+Destination: https://www.tiivi.fi/ikkunoiden-kuntokartoitus/ (osoite luettu mainoksen linkistä; kohdesivulle ei siirrytty)
+Started running: 2026-07-16
+Versions: Tällä ID:llä 2 versiota (1 of 2); sama kartoitusidea vähintään neljällä eri kuvatunnisteella
+EU reach: 118 475 (luettu 2026-10-26)
+Targeting: Suomi; 18–65+; kaikki
+Stopped running: active
+Run time: 102 päivää · Season: syksy 2026 (yhä aktiivinen; aloitus yllä)
+Ala: Ikkuna- ja oviremontit
+Ostotilanne: Hintaa ei ilmoitettu · viikkoja–kuukausia (tulkinta) · kuntokartoituksen ajanvaraus
+Found via: map: ikkunaremontti
+Points: 5 = käyttöikä 2 + saman idean vähintään neljä kuvaversiota 2 + testaava mainostaja 1
+Class: A
+Status: Candidate
+Advertiser testing: 51 aktiivista tulosta; uusia mainoksia huhti–lokakuussa 2026.
+Image: Mainoskirjaston ensimmäinen näytetty kuvaversio, ladattu alkuperäisenä JPEG-tiedostona ja tarkastettu visuaalisesti. Ei AI-muokkausta.
+Observation: Asiantuntija ikkunan vieressä, kuvan teksti: ”Ikkuna-asiantuntija maksutta käyttöösi” ja ”Varaa maksuton kuntokartoitus”. Erillistä päätekstiä ei näy mainostajan sivulla eikä avatuissa yksityiskohdissa. Valtakunnallinen brändi; mukaan otettiin konkreettinen ajanvarausmainos.
+Evidence limits: Julkinen kirjasto ei näytä mainoksen liidejä, myyntiä, kulua tai kannattavuutta. Inaktiivisten tarkistus oli otos; kattavuus ja poissulut keruulokissa. Mainostajan luvut ja väitteet ovat lainausta julkisesta mainoksesta, eivät agentuurin vahvistamia tosiasioita.
+Version evidence: 1211962417654236 → 731111638_1339561624820076_1746998396904675589_n.jpg; 2553107551769804 → 728629710_1732016371309485_3939633842387939230_n.jpg; 3985382965098663 → 727178785_1603840921741915_7132890996145646536_n.jpg; 973178638878173 → 731131756_1325798032999174_5833180459993729797_n.jpg. Sama linkkiteksti, Book Now ja 16.7.2026 aloitus; yksittäisen ID:n kahdesta versiosta ei yksin annettu kahta pistettä.
+

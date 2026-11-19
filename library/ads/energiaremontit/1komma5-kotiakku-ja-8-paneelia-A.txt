@@ -1,0 +1,27 @@
+Primary text: ⚠️ Vain rajoitettu kampanjaerä.
+Kotiakuston ostajalle 8 aurinkopaneelia kaupan päälle.
+Pyydä tarjous ennen kuin etu päättyy.
+Headline: Vain rajoitettu kampanjaerä
+Link description: Kotiakun ostajalle 8 aurinkopaneelia asennettuna kaupan päälle. Hyödynnä kampanja.
+CTA: Get offer
+Goal: Quote request (päätelty tekstistä, CTA:sta ja näkyvästä linkistä/kuvasta; Metan todellinen optimointitavoite ei ole julkinen)
+Ad Library: https://www.facebook.com/ads/library/?id=1328631109249978
+Advertiser Library: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=FI&view_all_page_id=354554888257361
+Started running: 2026-06-18
+Versions: Yksi versio tällä ID:llä; sama kahdeksan paneelin lisäetu vähintään kolmella eri kuvalla ja otsikolla
+EU reach: 277 238 (luettu 2026-10-26)
+Targeting: Halikko, Hyvinge (Metan kirjoitusasu), Isojoki, Kangasala, Kiukainen, Kuopio; 25–65+; kaikki
+Stopped running: active
+Run time: 130 päivää · Season: syksy 2026 (yhä aktiivinen; aloitus yllä)
+Ala: Kotiakut ja aurinkosähkö
+Ostotilanne: Hintaa ei ilmoitettu · viikkoja–kuukausia (tulkinta) · tarjouspyyntö
+Found via: map: aurinkopaneelit
+Points: 5 = käyttöikä 3 + saman idean vähintään kolme versiota 2; kokeneen mainostajan ja tavoittavuuden lisäpisteitä 0
+Class: A
+Status: Candidate
+Advertiser testing: 18 aktiivista ja noin 160 inaktiivista tulosta. Uusia lisäetuversioita kesä-, elo-, syys- ja lokakuussa; historian otoksessa kymmeniä mainoksia. Testausnäyttö täyttyy, mutta 18 aktiivisesta tuloksesta ei annettu kokeneen mainostajan lisäpistettä.
+Image: Mainoskirjaston ensimmäinen näytetty kuvaversio, ladattu alkuperäisenä JPEG-tiedostona ja tarkastettu visuaalisesti. Ei AI-muokkausta.
+Observation: Kotiakku ja paneelit, pääviestinä 8 aurinkopaneelia 0 € sekä 4000 € arvo. Etu liittyy kotiakuston ostoon; paneeleja ei tarjota ehdoitta ilmaiseksi. Arvot ovat mainostajan ilmoittamia.
+Evidence limits: Julkinen kirjasto ei näytä mainoksen liidejä, myyntiä, kulua tai kannattavuutta. Inaktiivisten tarkistus oli otos; kattavuus ja poissulut keruulokissa. Mainostajan luvut ja väitteet ovat lainausta julkisesta mainoksesta, eivät agentuurin vahvistamia tosiasioita.
+Version evidence: 1328631109249978 (18.6.) → 725598936_1717708489651911_1616415714247565246_n.jpg; 1675931116890210 (18.6.) → 725947095_1153951467806716_4598866511961964415_n.jpg; 1572441557867686 (13.8.) → 769309254_1665474255579901_2745036293288259902_n.jpg. Lisäksi uusi saman edun versio 1837378707396361 alkoi 26.10.2026. Eri Library ID:t ja eri kuvatunnisteet; ei väitettä kontrolloidusta A/B-testistä.
+

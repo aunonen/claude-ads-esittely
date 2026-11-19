@@ -1,0 +1,21 @@
+/* Brand stylesheet for this client. Filled in by /onboard (Round 2).
+   Every ad design links this file, so a change here restyles every ad.
+   Fonts: a Google Fonts @import, OR @font-face rules pointing at font files
+   you put in reference/brand/fonts/ (for licensed fonts). Check that the
+   fonts include Finnish characters (ä, ö, å). */
+
+@import url('{{GOOGLE_FONTS_URL, e.g. https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=block}}');
+
+/* For a licensed font file instead:
+@font-face { font-family: 'Brand Headline'; src: url('fonts/brand-headline.woff2') format('woff2'); font-weight: 400; }
+*/
+
+:root {
+  --brand-primary: {{#HEX}};    /* accent: badges, check marks, CTA elements */
+  --brand-secondary: {{#HEX}};  /* light background for split / plain-text layouts */
+  --brand-bg: {{#HEX}};         /* page background */
+  --brand-text: {{#HEX}};       /* text on light backgrounds */
+  --font-headline: '{{HEADLINE_FONT}}', serif;
+  --font-body: '{{BODY_FONT}}', sans-serif;
+  --headline-weight: 400;       /* raise for a bolder headline */
+}

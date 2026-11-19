@@ -1,0 +1,24 @@
+Primary text: none in Library
+Headline: none in Library
+CTA: Book Now
+Goal: Quote request (päätelty tekstistä, CTA:sta ja näkyvästä linkistä/kuvasta; Metan todellinen optimointitavoite ei ole julkinen)
+Ad Library: https://www.facebook.com/ads/library/?id=2016151809271288
+Advertiser Library: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=FI&view_all_page_id=264162933703038
+Destination: https://www.pihla.fi/ota-yhteytta/varaa-maksuton-arviokaynti/ (osoite luettu mainoksen linkistä; kohdesivulle ei siirrytty)
+Started running: 2026-04-28
+Versions: 4 versiota (1 of 4)
+EU reach: 13 746 (luettu 2026-10-26)
+Targeting: Suomi; 20–65+; kaikki
+Stopped running: active
+Run time: 181 päivää · Season: syksy 2026 (yhä aktiivinen; aloitus yllä)
+Ala: Ikkuna- ja oviremontit
+Ostotilanne: Hintaa ei ilmoitettu · viikkoja–kuukausia (tulkinta) · maksuttoman arviokäynnin ajanvaraus
+Found via: map: ikkunaremontti (mainostajan sivu)
+Points: 6 = käyttöikä 3 + neljä versiota 2 + testaava mainostaja 1
+Class: A
+Status: Candidate
+Advertiser testing: 48 aktiivista tulosta; uusia mainoksia huhti–lokakuussa 2026.
+Image: Mainoskirjaston ensimmäinen näytetty kuvaversio, ladattu alkuperäisenä JPEG-tiedostona ja tarkastettu visuaalisesti. Ei AI-muokkausta.
+Observation: Ikkunan ja kodin kuva. Kuvateksti: ”Vetääkö? Ehjä ikkuna ei ole sama kuin toimiva ikkuna” ja ”Varaa ilmainen arviokäynti”. Erillistä päätekstiä ja linkkiotsikkoa ei näy mainostajan sivulla eikä avatuissa yksityiskohdissa. Valtakunnallinen brändi; mukaan otettiin ajanvaraus, ei artikkeli- tai arvontamainoksia.
+Evidence limits: Julkinen kirjasto ei näytä mainoksen liidejä, myyntiä, kulua tai kannattavuutta. Inaktiivisten tarkistus oli otos; kattavuus ja poissulut keruulokissa. Mainostajan luvut ja väitteet ovat lainausta julkisesta mainoksesta, eivät agentuurin vahvistamia tosiasioita.
+

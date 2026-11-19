@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fi"><head>
+<meta charset="utf-8">
+<title>Laskeutumissivu – työpöytä</title>
+<script src="design-1-0.bin"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("design-1-3.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("design-1-4.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("design-1-5.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("design-1-6.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("design-1-7.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("design-1-8.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("design-1-9.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("design-1-3.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("design-1-4.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("design-1-5.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("design-1-6.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("design-1-7.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("design-1-8.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("design-1-9.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("design-1-3.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("design-1-4.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("design-1-5.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("design-1-6.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("design-1-7.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("design-1-8.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("design-1-9.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb54C-s0.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb94C-s0.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("design-1-10.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb54C-s0.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb94C-s0.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("design-1-10.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb54C-s0.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb94C-s0.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("design-1-10.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#1A1A1A}a:hover{color:#2D6FC0}
+.lp *{box-sizing:border-box}
+.lp a:focus-visible,.lp button:focus-visible,.lp input:focus-visible,.lp summary:focus-visible{outline:3px solid #1A1A1A;outline-offset:3px}
+.lp summary{list-style:none;cursor:pointer}
+.lp summary::-webkit-details-marker{display:none}
+.lp details[open] .chev{transform:rotate(180deg)}
+@media (max-width:760px){.navlinks{display:none !important}}
+</style>
+</helmet>
+<div class="lp" style="width: 100%; font-family: Inter, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #1A1A1A; font-size: 17px; line-height: 1.6; background: #FFFFFF">
+
+<div style="background: #FFF4D6; color: #6B4300; font-size: 14px; padding: 10px 24px; text-align: center; line-height: 1.4">
+<strong>Kehitysversio:</strong> täydennettävät tiedot on merkitty keltaisella. Julkaisussa hakasulkeita ei saa näkyä.
+</div>
+
+<section id="top" style="padding: 72px 24px 96px; background-color: #ffffff">
+<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 520px; min-width: 0; max-width: 640px; display: flex; flex-direction: column; gap: 24px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; color: #374151">META-MAINONTAA SUOMALAISILLE PALVELUYRITYKSILLE</p>
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(36px, 4.4vw, 58px); line-height: 1.08; letter-spacing: -0.02em; color: #1A1A1A">Lisää tarjouspyyntöjä omalta <span style="box-shadow: inset 0 -0.3em 0 #A9D1FF">toiminta-alueeltasi.</span></h1>
+<p style="margin: 0; font-size: 19px; color: #4A4A52; max-width: 600px">Suunnittelen tarjouksen, teen Facebook- ja Instagram-mainokset yrityksesi aidoista työkuvista ja hoidan kampanjat puolestasi. Tavoitteena on saada yhteydenottoja ihmisiltä, jotka tarvitsevat palveluasi.</p>
+<div style="display: flex; gap: 14px; align-items: center; background: #FFFFFF; border: 1px solid #C9DDF5; border-radius: 14px; padding: 14px 18px; max-width: 560px">
+<span style="flex: none; min-width: 56px; height: 44px; padding: 0 10px; border-radius: 10px; color: #1A1A1A; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; display: flex; align-items: center; justify-content: center; background-color: #D8E8FB">0 €</span>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A4A52"><strong style="color: #1A1A1A">Ensimmäinen kuukausi 0 € hallinnointipalkkiota.</strong> Maksat vain mainosbudjetin suoraan Metalle.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
+<a href="#yhteydenotto" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; color: #1A1A1A; border-radius: 12px; font-weight: 600; font-size: 17px; text-decoration: none; background-color: #A9D1FF">Pyydä maksuton kartoitus</a>
+<p style="margin: 0; font-size: 14px; color: #6B6B73">Otan sinuun yhteyttä ja käymme tarpeesi läpi, pyyntö ei ole sitova.</p>
+<p style="margin: 4px 0 0; font-size: 15px; color: #4A4A52">Tai soita heti: <a href="tel:" style="font-weight: 600"><span style="background: #FFF4D6; color: #6B4300; padding: 0 4px; border-radius: 4px">[PUHELIN]</span></a></p>
+</div>
+</div>
+<div style="flex: 1 1 360px; min-width: 0; max-width: 440px; aspect-ratio: 4 / 5; border-radius: 20px; border: 2px dashed #7FB3F0; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 32px; text-align: center">
+<svg aria-hidden="true" width="40" height="40" sc-camel-view-box="0 0 24 24" fill="none" stroke="#2D6FC0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="9" cy="9" r="2"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+<p style="margin: 0; font-weight: 600"><span style="background: #FFF4D6; color: #6B4300; padding: 0 4px; border-radius: 4px">[OMA_KUVA]</span></p>
+<p style="margin: 0; font-size: 14px; color: #6B6B73; max-width: 280px">Aito kuva tekijästä tai oma oikea mainosesimerkki. Ei kuvapankkikuvia. Jos kuvaa ei ole, hero jää yksipalstaiseksi.</p>
+</div>
+</div>
+</section>
+
+<section id="miten" style="padding: 96px 24px; background: #FFFFFF">
+<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+<div style="max-width: 680px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 42px); line-height: 1.15; letter-spacing: -0.01em">Sinä hoidat asiakkaasi. Minä hoidan <span style="box-shadow: inset 0 -0.32em 0 #A9D1FF">mainonnan.</span></h2>
+<p style="margin: 0; font-size: 18px; color: #4A4A52">Meta-mainonta ei lähde liikkeelle näyttävistä kuvista vaan siitä, miksi asiakkaan kannattaisi ottaa juuri sinun yritykseesi yhteyttä.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<div style="flex: 1 1 300px; min-width: 0; border: 1px solid #E5E7EB; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px; background: #FFFFFF">
+<span style="width: 44px; height: 44px; border-radius: 50%; color: #1A1A1A; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; display: flex; align-items: center; justify-content: center; background-color: #a9d1ff">1</span>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; line-height: 1.3">Rakennetaan toimiva tarjous</h3>
+<p style="margin: 0; font-size: 16px; color: #4A4A52">Käymme läpi palvelusi, toiminta-alueesi ja sen, millaisia töitä haluat lisää. Näiden perusteella rakennan mainontaan sopivan tarjouksen ja yhteydenottotavan.</p>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; border: 1px solid #E5E7EB; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px; background: #FFFFFF">
+<span style="width: 44px; height: 44px; border-radius: 50%; color: #1A1A1A; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; display: flex; align-items: center; justify-content: center; background-color: #a9d1ff">2</span>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; line-height: 1.3">Teen ensimmäiset mainokset ja aloitan järjestelmällisen testaamisen</h3>
+<p style="margin: 0; font-size: 16px; color: #4A4A52">Teen Facebook- ja Instagram-mainokset ensisijaisesti yrityksesi aidoista työ- ja projektikuvista. Käynnistän kampanjan, seuraan tuloksia ja teen muutoksia datan perusteella. Systemaattinen testaaminen on jatkuva prosessi, jonka tavoitteena on alentaa liidien hintaa ja lisätä niiden määrää.</p>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; border: 1px solid #E5E7EB; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 14px; background: #FFFFFF">
+<span style="width: 44px; height: 44px; border-radius: 50%; color: #1A1A1A; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; display: flex; align-items: center; justify-content: center; background-color: #a9d1ff">3</span>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 21px; line-height: 1.3">Saat yhteydenotot suoraan itsellesi</h3>
+<p style="margin: 0; font-size: 16px; color: #4A4A52">Kun mainonta tuottaa uuden liidin, saat liidin yhteystiedot sovittuun kanavaan. Sinä vastaat yhteydenottoihin ja teet tarjoukset. Raportoin mainonnan kulut ja tulokset selkeästi.</p>
+</div>
+</div>
+<p style="margin: 0; font-size: 16px; color: #4A4A52; display: flex; gap: 10px; align-items: center"><svg aria-hidden="true" width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="#2D6FC0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg>Mainokset pyörivät yrityksesi omalta mainostililtä. Mainosbudjetti maksetaan suoraan Metalle.</p>
+</div>
+</section>
+
+<section id="hinta" style="background: #FFFFFF; padding: 0 24px 96px">
+<div style="max-width: 1120px; margin: 0 auto; color: #1A1A1A; border-radius: 28px; padding: 64px 56px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start; background-color: #d8e8fb">
+<div style="flex: 1 1 480px; min-width: 0; max-width: 600px; display: flex; flex-direction: column; gap: 22px">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 42px); line-height: 1.15; letter-spacing: -0.01em; color: #1A1A1A">Kokeile kuukausi ilmaiseksi, maksat vain mainosbudjetin Metalle</h2>
+<p style="margin: 0; font-size: 18px; color: #1A1A1A">Ensimmäisen kuukauden aikana rakennan ja hoidan kampanjasi täysin ilman hallinnointipalkkiota. Maksat ainoastaan Metan veloittaman mainosbudjetin.</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; color: #1A1A1A">
+<li style="display: flex; gap: 12px; align-items: flex-start"><svg aria-hidden="true" style="flex: none; margin-top: 4px" width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>0 € hallinnointipalkkiota ensimmäiseltä kuukaudelta. Ei erillistä aloitusmaksua.</span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start"><svg aria-hidden="true" style="flex: none; margin-top: 4px" width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Mainosbudjetti on sinun hallinnassasi. Maksat sen suoraan Metalle omalta mainostililtäsi (mainosbudjetin suuruus valintasi mukaan 20–40 €/päivä, mitä suurempi mainosbudjetti, sitä enemmän tuloksia mainonnalla voi saavuttaa).</span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start"><svg aria-hidden="true" style="flex: none; margin-top: 4px" width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Kuukausihinta sovitaan ennen aloittamista, eikä sinun tarvitse jatkaa ensimmäisen kuukauden jälkeen.</span></li>
+</ul>
+<a href="#yhteydenotto" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; background: #1A1A1A; color: #FFFFFF; border-radius: 12px; font-weight: 600; font-size: 17px; text-decoration: none">Pyydä maksuton kartoitus</a>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; max-width: 400px; background: #FFFFFF; color: #1A1A1A; border-radius: 20px; padding: 28px; display: flex; flex-direction: column">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid #E5E7EB">
+<div style="display: flex; flex-direction: column"><span style="font-size: 14px; color: #6B6B73">Hallinnointipalkkio</span><span style="font-weight: 600">1. kuukausi</span></div>
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 44px; color: #1A1A1A; line-height: 1; box-shadow: inset 0 -0.28em 0 #A9D1FF">0 €</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E5E7EB">
+<div style="display: flex; flex-direction: column"><span style="font-size: 14px; color: #6B6B73">Mainosbudjetti, maksetaan Metalle</span><span style="font-weight: 600">Sinun valintasi</span></div>
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 22px; line-height: 1.2; text-align: right">20–40 €<span style="font-size: 15px; font-weight: 500; color: #6B6B73"> /pv</span></span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-top: 18px">
+<div style="display: flex; flex-direction: column"><span style="font-size: 14px; color: #6B6B73">Jatko 1. kuukauden jälkeen</span><span style="font-weight: 600">Vapaaehtoinen</span></div>
+<span style="font-size: 15px; color: #4A4A52; text-align: right">Hinta sovitaan<br>ennen aloitusta</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="tekija" style="padding: 32px 24px 96px; background: #FFFFFF">
+<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+<div style="flex: 0 1 340px; min-width: 0; aspect-ratio: 1 / 1; border-radius: 20px; border: 2px dashed #7FB3F0; background: #EEF5FD; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 24px; text-align: center">
+<svg aria-hidden="true" width="40" height="40" sc-camel-view-box="0 0 24 24" fill="none" stroke="#2D6FC0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>
+<p style="margin: 0; font-weight: 600"><span style="background: #FFF4D6; color: #6B4300; padding: 0 4px; border-radius: 4px">[OMA_KUVA]</span></p>
+<p style="margin: 0; font-size: 14px; color: #6B6B73">Aito, hyvälaatuinen kuva tekijästä</p>
+</div>
+<div style="flex: 1 1 480px; min-width: 0; max-width: 680px; display: flex; flex-direction: column; gap: 18px; font-size: 17px; color: #4A4A52">
+<p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600; line-height: 1.35; color: #1A1A1A">Olen Aino Toivonen, ja vastaan kaikista asiakastöistä itse.</p>
+<p style="margin: 0">Olen toiminut valo- ja videokuvaajana yli kolmen vuoden ajan. Nyt olen siirtymässä kohti Meta-mainontaa. Asiakasprojekteja minulla on takana vasta muutamia, siksi pystyn tarjoamaan palvelua erittäin hyvällä tarjouksella: ensimmäinen kuukausi ilman hallinnointipalkkiota.</p>
+<p style="margin: 0">Toteutan itse koko palvelun alusta loppuun. Suunnittelen tarjouksen, teen mainokset ja hoidan kampanjoiden seurannan. Kun tarvitset vastauksen, olet yhteydessä suoraan tekijään.</p>
+<p style="margin: 0">Mielestäni mainonnassa on kaikista tärkeintä sen tuottama mitattava tulos. Näyttökerrat eivät tuo yrityksellesi rahaa, uudet asiakkaat tuovat. Siksi olen tarkka siitä, että mainonta on kannattavaa ja tähtää nimenomaan asiakkaiden hankintaan.</p>
+<p style="margin: 0">Rakennan palvelua tarkoituksella yksinkertaiseksi: yrityksesi omat, aidot kuvat, selkeä tarjous, sovitut tavoitteet ja raportointi, josta ymmärtää, mitä mainosrahalla saatiin aikaan.</p>
+</div>
+</div>
+</section>
+
+<section id="ukk" style="padding: 96px 24px; background-color: #d8e8fb">
+<div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 42px); line-height: 1.15">Yleisimmät kysymykset</h2>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<details open="" style="background: #FFFFFF; border: 1px solid #C9DDF5; border-radius: 14px">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; padding: 16px 22px; font-weight: 600; font-size: 18px">Paljonko mainosbudjettia tarvitaan?<span class="chev" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; background: #D8E8FB; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 22px 22px; color: #4A4A52">Sopiva budjetti riippuu palvelustasi, toiminta-alueestasi ja tavoitteesta. Käymme realistisen budjetin läpi ennen kampanjan käynnistämistä. Mainontaa ei käynnistetä ilman hyväksyntääsi. Mainosbudjetin suositeltu suuruus on 20–40 €/päivä.</p>
+</details>
+<details style="background: #FFFFFF; border: 1px solid #C9DDF5; border-radius: 14px">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; padding: 16px 22px; font-weight: 600; font-size: 18px">Mitä jos mainonta ei tuo yhtään asiakasta?<span class="chev" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; background: #D8E8FB; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 22px 22px; color: #4A4A52">Mainonnalla tavoittelemme yhteydenottoja, mutta en voi luvata, että jokainen yhteydenotto muuttuu maksavaksi asiakkaaksi. Vaikuttavia tekijöitä ovat esimerkiksi tarjous, kysyntä, kilpailu ja se, miten nopeasti yhteydenottoihin vastataan. Seuraamme yhteydenottojen määrää ja kustannuksia.</p>
+</details>
+<details style="background: #FFFFFF; border: 1px solid #C9DDF5; border-radius: 14px">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; padding: 16px 22px; font-weight: 600; font-size: 18px">Mitä minun pitää itse tehdä?<span class="chev" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; background: #D8E8FB; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 22px 22px; color: #4A4A52">Kerro, millaisia töitä haluat lisää, toimita sovitut kuvat ja anna tarvittavat käyttöoikeudet yrityksesi Facebook-sivuun ja mainostiliin. Hyväksyt mainokset ja huolehdit saapuneiden yhteydenottojen käsittelystä. Minä huolehdin markkinatutkimuksesta, mainosstrategian suunnittelusta, mainosten tekemisestä, kampanjan rakentamisesta ja raportoinnista.</p>
+</details>
+<details style="background: #FFFFFF; border: 1px solid #C9DDF5; border-radius: 14px">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; padding: 16px 22px; font-weight: 600; font-size: 18px">Omistanko oman mainostilini?<span class="chev" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; background: #D8E8FB; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 22px 22px; color: #4A4A52">Kyllä. Mainonta toteutetaan yrityksesi omalla mainostilillä, ja mainosbudjetti maksetaan suoraan Metalle. Tilin käyttö, tiedot ja sinne tehdyt mainokset jäävät yrityksellesi, vaikka yhteistyö päättyisi.</p>
+</details>
+<details style="background: #FFFFFF; border: 1px solid #C9DDF5; border-radius: 14px">
+<summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; padding: 16px 22px; font-weight: 600; font-size: 18px">Onko palvelu tarkoitettu yritykselleni?<span class="chev" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 50%; background: #D8E8FB; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 22px 22px; color: #4A4A52">Palvelu sopii parhaiten suomalaisille palveluyrityksille, joilla yhden asiakkaan arvo on tyypillisesti yli 1 000 € ja mahdollisuus ottaa vastaan uusia töitä. Jos en usko mainonnan sopivan tilanteeseesi, kerron sen suoraan.</p>
+</details>
+</div>
+</div>
+</section>
+
+<section id="yhteydenotto" style="background: #FFFFFF; padding: 96px 24px">
+<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+<div style="flex: 1 1 420px; min-width: 0; max-width: 520px; display: flex; flex-direction: column; gap: 18px">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 3.2vw, 42px); line-height: 1.15; color: #1A1A1A">Katsotaan, voisiko tämä toimia yrityksellesi.</h2>
+<p style="margin: 0; font-size: 18px; color: #4A4A52">Jätä yhteystietosi, niin otan yhteyttä ja käymme läpi yrityksesi palvelun, alueen ja mahdollisen mainosbudjetin. Sinun ei tarvitse vielä tietää, haluatko sitoutua palveluun.</p>
+<div style="display: flex; gap: 14px; align-items: center; margin-top: 8px; padding: 18px 20px; background: #EEF5FD; border-radius: 14px">
+<span aria-hidden="true" style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: #A9D1FF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></span>
+<p style="margin: 0; font-size: 16px; color: #4A4A52">Tai haluatko soittaa heti? <a href="tel:" style="font-weight: 600"><span style="background: #FFF4D6; color: #6B4300; padding: 0 4px; border-radius: 4px">[PUHELIN]</span></a></p>
+</div>
+</div>
+<form style="flex: 1 1 420px; min-width: 0; max-width: 520px; background: #FFFFFF; color: #1A1A1A; border: 2px solid #A9D1FF; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 20px; box-shadow: 10px 10px 0 #D8E8FB; border-color: #374151">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-yritys" style="font-weight: 600; font-size: 15px">Yritys</label>
+<input id="f-yritys" name="yritys" type="text" required="" maxlength="120" autocomplete="organization" style="min-height: 50px; padding: 0 14px; border: 1px solid #8E8A8D; border-radius: 10px; font: inherit; font-size: 16px; color: #1A1A1A">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-email" style="font-weight: 600; font-size: 15px">Sähköposti</label>
+<input id="f-email" name="email" type="email" required="" maxlength="160" autocomplete="email" style="min-height: 50px; padding: 0 14px; border: 1px solid #8E8A8D; border-radius: 10px; font: inherit; font-size: 16px; color: #1A1A1A">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-puh" style="font-weight: 600; font-size: 15px">Puhelinnumero</label>
+<input id="f-puh" name="puhelin" type="tel" required="" maxlength="20" autocomplete="tel" inputmode="tel" placeholder="040 123 4567 tai +358 40 123 4567" style="min-height: 50px; padding: 0 14px; border: 1px solid #8E8A8D; border-radius: 10px; font: inherit; font-size: 16px; color: #1A1A1A">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="f-www" style="font-weight: 600; font-size: 15px">Verkkosivun osoite <span style="font-weight: 400; color: #6B6B73">(valinnainen)</span></label>
+<input id="f-www" name="verkkosivu" type="url" maxlength="200" autocomplete="url" style="min-height: 50px; padding: 0 14px; border: 1px solid #8E8A8D; border-radius: 10px; font: inherit; font-size: 16px; color: #1A1A1A">
+</div>
+<button type="submit" style="min-height: 56px; border: 0; border-radius: 12px; background: #A9D1FF; color: #1A1A1A; font: inherit; font-weight: 700; font-size: 17px; cursor: pointer">Pyydä maksuton kartoitus</button>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #6B6B73">Käytän antamiasi tietoja vain yhteydenottoosi vastaamiseen ja mahdollisen yhteistyön selvittämiseen. Lue <a href="#" style="font-weight: 600">tietosuojaseloste</a>.</p>
+</form>
+</div>
+</section>
+
+<footer style="background: #FFFFFF; color: #4A4A52; padding: 40px 24px; font-size: 15px; border-top: 4px solid #A9D1FF">
+<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="color: #1A1A1A; font-weight: 600">[YRITYSNIMI] · [ETUNIMI SUKUNIMI] · Y-tunnus [Y-TUNNUS]</span>
+<span>[PUHELIN] · [SÄHKÖPOSTI]</span>
+</div>
+<div style="display: flex; gap: 24px; align-items: center">
+<a href="#">Tietosuojaseloste</a>
+<a href="#">Evästeasetukset</a>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:4300}}">
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+
+
+</body></html>

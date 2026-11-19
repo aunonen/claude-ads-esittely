@@ -1,0 +1,35 @@
+{
+  "_comment": "Filled in by /onboard. Read by the meta-ads-campaign-setup skill. Values wrapped in {{ }} are unfilled placeholders. The Meta access token does NOT go here; it lives in .claude/settings.local.json (git-ignored).",
+
+  "brand_name": "{{BRAND_NAME}}",
+  "ad_account_id": null,
+  "ad_account_name": null,
+  "pixel_id": null,
+  "page_id": null,
+  "_ids_note": "30.10.2026: ei vielä Facebook-sivua eikä mainostiliä. Phase 4 pysähtyy, kunnes ad_account_id, page_id ja lead_form_id on täytetty.",
+
+  "currency": "EUR",
+  "currency_symbol": "€",
+  "campaign_daily_budget_total": 15,
+  "min_daily_budget_per_ad": 5,
+  "_budget_note": "campaign_daily_budget_total is the only budget authority. Test slots per round = floor(total / min_daily_budget_per_ad); each ad in the test gets total / number of ads. 15 / 5 = 3 mainosta per kierros.",
+
+  "objective": "OUTCOME_LEADS",
+  "conversion_location": "instant_form",
+  "_conversion_note": "website: pixel_id + conversion_event are required (Purchase for a store, Lead for a website form). instant_form: lead_form_id is required, pixel_id and conversion_event may be null.",
+  "conversion_event": null,
+  "lead_form_id": null,
+  "_lead_form_note": "Pikalomake luodaan sivulle (Publishing tools → Instant forms): higher intent, kysymykset toimiala, liikevaihtoluokka (alle 200 k / 200–500 k / yli 500 k), nimi, puhelin, sähköposti.",
+  "attribution": "7-day click, 1-day view",
+  "countries": ["FI"],
+  "geo_targeting": { "type": "countries" },
+
+  "website_domain": null,
+  "display_link": null,
+  "campaign_name_prefix": "{{BRAND_NAME}}",
+  "cta_type": "LEARN_MORE",
+
+  "landing_pages": {
+    "default": null
+  }
+}

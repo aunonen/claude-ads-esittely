@@ -1,0 +1,18 @@
+{
+  "_comment": "Two spreadsheets per client. spreadsheet_id = the client's log (Creative Generations + Brief tabs), may be shared with the client. inspiration_spreadsheet_id = the agency's internal competitor analysis (Ad Inspiration tab) and component ratings (Komponentit tab), never shared with the client.",
+  "spreadsheet_id": "{{ID}}",
+  "spreadsheet_url": "https://docs.google.com/spreadsheets/d/{{ID}}/edit",
+  "inspiration_spreadsheet_id": "{{ID}}",
+  "inspiration_spreadsheet_url": "https://docs.google.com/spreadsheets/d/{{ID}}/edit",
+  "tabs": {
+    "creative_generations": "Creative Generations",
+    "brief": "Brief",
+    "offer_proposals": "Tarjousehdotukset",
+    "ad_inspiration": "Ad Inspiration",
+    "components": "Komponentit"
+  },
+  "drive_folder_id": "{{ID}}",
+  "drive_folder_url": "https://drive.google.com/drive/folders/{{ID}}",
+  "ad_inspiration_folder_id": "{{ID}}",
+  "ad_inspiration_folder_url": "https://drive.google.com/drive/folders/{{ID}}"
+}

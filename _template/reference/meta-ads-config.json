@@ -1,0 +1,35 @@
+{
+  "_comment": "Filled in by /onboard. Read by the meta-ads-campaign-setup skill. Values wrapped in {{ }} are unfilled placeholders. The Meta access token does NOT go here; it lives in .claude/settings.local.json (git-ignored).",
+
+  "brand_name": "{{BRAND_NAME}}",
+  "ad_account_id": "{{AD_ACCOUNT_ID_DIGITS_ONLY_NO_act_PREFIX}}",
+  "ad_account_name": "{{AD_ACCOUNT_NAME}}",
+  "pixel_id": "{{PIXEL_ID}}",
+  "page_id": "{{FACEBOOK_PAGE_ID}}",
+
+  "currency": "{{CURRENCY_CODE_E.G._USD}}",
+  "currency_symbol": "{{CURRENCY_SYMBOL_E.G._$}}",
+  "campaign_daily_budget_total": "{{TOTAL_DAILY_BUDGET_FOR_THE_WHOLE_TEST_CAMPAIGN}}",
+  "min_daily_budget_per_ad": 5,
+  "_budget_note": "campaign_daily_budget_total is the only budget authority. Test slots per round = floor(total / min_daily_budget_per_ad); each ad in the test gets total / number of ads.",
+
+  "objective": "{{OUTCOME_SALES_or_OUTCOME_LEADS}}",
+  "conversion_location": "{{website_or_instant_form}}",
+  "_conversion_note": "website: pixel_id + conversion_event are required (Purchase for a store, Lead for a website form). instant_form: lead_form_id is required, pixel_id and conversion_event may be null.",
+  "conversion_event": "Purchase",
+  "lead_form_id": null,
+  "attribution": "7-day click, 1-day view",
+  "countries": ["{{ISO_COUNTRY_CODE_E.G._US}}"],
+  "geo_targeting": { "type": "countries" },
+  "_geo_note": "For a local business use {\"type\": \"radius\", \"location\": \"City, Country\", \"radius_km\": 50}.",
+
+  "website_domain": "{{yourbrand.com}}",
+  "display_link": "{{yourbrand.com}}",
+  "campaign_name_prefix": "{{BRAND_NAME}}",
+  "cta_type": "SHOP_NOW",
+
+  "landing_pages": {
+    "default": "https://{{yourbrand.com}}/",
+    "{{photo-folder-name-or-offer-label}}": "https://{{yourbrand.com}}/products/{{product-handle}}"
+  }
+}

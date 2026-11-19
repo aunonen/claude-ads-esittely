@@ -1,0 +1,26 @@
+Primary text: Käytä kätevää laskuriamme saadaksesi hinta-arvion ilmalämpöpumpulle kotiisi tai mökille! 🏡
+Headline: Ilmalämpöpumpun hintalaskuri 🏡
+Link description: Ilmalämpöpumpulla voit lämmittää ja viilentää omakotitalot, kesämökit ja muut tilat helposti. Ilmalämpöpumppu toimii ilmastointilaitteena ja kosteudenpoistajana parantaen asumismukavuutta kesähelteillä ja säästäen energiakuluja talven pakkasilla.
+CTA: Learn More
+Goal: Quote request (päätelty tekstistä, CTA:sta ja näkyvästä linkistä/kuvasta; Metan todellinen optimointitavoite ei ole julkinen)
+Ad Library: https://www.facebook.com/ads/library/?id=3589550714517204
+Advertiser Library: https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=FI&view_all_page_id=158243837571416
+Destination: https://lampoykkonen.fi/ilmalampopumpun-hintalaskuri/ (osoite luettu mainoksen linkistä; kohdesivulle ei siirrytty)
+Started running: 2026-03-13
+Versions: 2 versiota (1 of 2); versiopisteitä 0
+EU reach: 312 664 (luettu 2026-10-26)
+Targeting: Suomi; 18–65+; kaikki
+Stopped running: active
+Run time: 227 päivää · Season: syksy 2026 (yhä aktiivinen; aloitus yllä)
+Ala: Lämpöpumppujen asennus
+Ostotilanne: Hintaa ei ilmoitettu · päiviä–viikkoja (tulkinta) · asennetun ilmalämpöpumpun hintalaskuri
+Found via: discover: omakotitalo (mainostajan sivu)
+Points: 5 = käyttöikä 3 + testaava mainostaja 1 + kierroksen toiseksi korkein EU-tavoittavuus 1
+Class: A
+Status: Candidate
+Advertiser testing: 64 aktiivista tulosta; uusia mainoksia useina kuukausina helmi–lokakuussa 2026.
+Image: Mainoskirjaston ensimmäinen näytetty kuvaversio, ladattu alkuperäisenä JPEG-tiedostona ja tarkastettu visuaalisesti. Ei AI-muokkausta.
+Observation: Hinta-arvio asennettuna ja vaivattomuus ovat kuvan pääviesti. Tavoite päätelty hintalaskurista; laskurin lomaketta tai yhteystietovaatimusta ei tarkistettu. Valtakunnallinen palveluyritys.
+Evidence limits: Julkinen kirjasto ei näytä mainoksen liidejä, myyntiä, kulua tai kannattavuutta. Inaktiivisten tarkistus oli otos; kattavuus ja poissulut keruulokissa. Mainostajan luvut ja väitteet ovat lainausta julkisesta mainoksesta, eivät agentuurin vahvistamia tosiasioita.
+Reach scoring: 312 664 on toiseksi korkein 10 tallennetusta mainoksesta (ylin 20 %), ja toiseksi korkein neljästä energia-alan tallennuksesta. Relative reach +1; kahdesta versiosta 0. Ei väitettä >10 %:n peitosta tai tuloksista.
+

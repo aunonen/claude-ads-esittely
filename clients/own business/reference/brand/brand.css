@@ -1,0 +1,15 @@
+/* Brand stylesheet for this client. Filled in by /onboard (Round 2).
+   Every ad design links this file, so a change here restyles every ad.
+   Fonts: Google Fonts (both include ä, ö, å). */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&display=block');
+
+:root {
+  --brand-primary: #2F5BFF;    /* accent: badges, check marks, CTA elements */
+  --brand-secondary: #EEF1FF;  /* light background for split / plain-text layouts */
+  --brand-bg: #FFFFFF;         /* page background */
+  --brand-text: #111111;       /* text on light backgrounds */
+  --font-headline: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --headline-weight: 700;
+}

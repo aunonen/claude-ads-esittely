@@ -1,0 +1,30 @@
+# Agency hub repo: tracks the system (CLAUDE.md, README, _template/) and each
+# client's text files (context/, plans/, configs, brand). Each client folder
+# also has its own .gitignore for secrets and generated output.
+
+# Secrets: never commit tokens
+.env
+.env.*
+**/.claude/settings.local.json
+
+# Client photos and inspiration images: large binaries that rarely change.
+# Keep only the README files in these folders.
+clients/*/reference/products/Images/
+clients/*/reference/ad-inspiration/*
+!clients/*/reference/ad-inspiration/README.md
+
+# OS / Python
+.DS_Store
+Thumbs.db
+desktop.ini
+__pycache__/
+*.pyc
+
+# Agency ad library: images stay out of git, sidecars and logs are tracked
+library/ads/**/*.jpg
+library/ads/**/*.jpeg
+library/ads/**/*.png
+library/ads/**/*.webp
+
+# Test copies of client workspaces (not part of the system history)
+clients/*-testi/
