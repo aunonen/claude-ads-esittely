@@ -1,0 +1,191 @@
+/* Shared base for every ad design. render.py copies this file next to each
+   design before rendering, so edit it here (~/.claude/skills/ad-design/),
+   never in a client folder. Brand values (colours, fonts) come from the
+   client's reference/brand/brand.css, which a design links before this file. */
+
+:root {
+  /* Fallbacks if a brand.css value is missing */
+  --brand-primary: #1f1f1f;
+  --brand-secondary: #f4f1ec;
+  --brand-bg: #ffffff;
+  --brand-text: #1f1f1f;
+  --font-headline: Georgia, serif;
+  --font-body: Arial, sans-serif;
+
+  --w: 1080px;
+  --h: 1080px;
+  --pad: 72px;          /* outer margin */
+  --safe-bottom: 72px;  /* VT raises this to keep the Stories/Reels UI zone clear */
+  --headline-size: 88px;
+  --sub-size: 38px;
+  --small-size: 28px;
+}
+html[data-size="vt"] { --w: 1080px; --h: 1920px; --pad: 80px; --safe-bottom: 460px; --headline-size: 104px; --sub-size: 42px; }
+html[data-size="hz"] { --w: 1920px; --h: 1080px; --pad: 96px; --headline-size: 96px; --sub-size: 40px; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: var(--w); height: var(--h); overflow: hidden; background: var(--brand-bg); }
+body { font-family: var(--font-body); color: var(--brand-text); -webkit-font-smoothing: antialiased; }
+
+/* The frame. Every design is one .ad element. */
+.ad { position: relative; width: var(--w); height: var(--h); overflow: hidden; background: var(--brand-bg); }
+
+/* Show/hide parts per size: <div class="only-vt">, <div class="not-hz"> */
+html:not([data-size="sq"]) .only-sq, html:not([data-size="vt"]) .only-vt, html:not([data-size="hz"]) .only-hz { display: none !important; }
+html[data-size="sq"] .not-sq, html[data-size="vt"] .not-vt, html[data-size="hz"] .not-hz { display: none !important; }
+
+/* Photo: the client's real photo, full-bleed. Only crop/position it, set
+   object-position per size if needed: style="--pos-vt: 40% 50%" */
+.photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 50% 50%); }
+html[data-size="sq"] .photo { object-position: var(--pos-sq, var(--pos, 50% 50%)); }
+html[data-size="vt"] .photo { object-position: var(--pos-vt, var(--pos, 50% 50%)); }
+html[data-size="hz"] .photo { object-position: var(--pos-hz, var(--pos, 50% 50%)); }
+
+/* Legibility scrims: subtle darkening behind text, never a coloured panel */
+.scrim-bottom { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.62) 0%, rgba(0,0,0,.28) 38%, rgba(0,0,0,0) 62%); }
+.scrim-top { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,.2) 35%, rgba(0,0,0,0) 55%); }
+.scrim-left { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,.6) 0%, rgba(0,0,0,.25) 45%, rgba(0,0,0,0) 70%); }
+
+/* Text block positioned inside the safe area */
+.copy { position: absolute; left: var(--pad); right: var(--pad); z-index: 2; }
+.copy.bottom { bottom: var(--safe-bottom); }
+.copy.top { top: var(--pad); }
+.copy.center { top: 50%; transform: translateY(-50%); }
+.copy.left-half { right: auto; width: calc(var(--w) * .48); }
+.on-photo { color: #fff; text-shadow: 0 2px 18px rgba(0,0,0,.25); }
+
+.headline { font-family: var(--font-headline); font-size: var(--headline-size); line-height: 1.04; letter-spacing: -0.01em; font-weight: var(--headline-weight, 400); text-wrap: balance; }
+.sub { font-family: var(--font-body); font-size: var(--sub-size); line-height: 1.3; margin-top: 24px; text-wrap: pretty; }
+.small { font-family: var(--font-body); font-size: var(--small-size); line-height: 1.35; }
+.accent { color: var(--brand-primary); }
+
+/* Logo: full lockup, centred at the top by default */
+.logo { position: absolute; z-index: 3; top: var(--pad); left: 50%; transform: translateX(-50%); height: 64px; width: auto; }
+.logo.left { left: var(--pad); transform: none; }
+html[data-size="vt"] .logo { height: 76px; }
+
+/* Social proof badges: rotate treatments across a batch */
+.badge { display: inline-flex; align-items: center; gap: 14px; font-family: var(--font-body); font-size: var(--small-size); line-height: 1; }
+.badge.pill { background: var(--brand-primary); color: #fff; padding: 18px 28px; border-radius: 999px; }
+.badge.pill-light { background: rgba(255,255,255,.92); color: var(--brand-text); padding: 18px 28px; border-radius: 999px; }
+.badge.plain { color: inherit; }
+.badge.seal { width: 200px; height: 200px; border-radius: 50%; flex-direction: column; justify-content: center; text-align: center; background: var(--brand-primary); color: #fff; padding: 24px; gap: 8px; line-height: 1.15; }
+.stars { color: #f5b301; letter-spacing: 2px; font-size: 1.1em; }
+.badge-slot { margin-top: 32px; }
+
+/* USP row: 3–4 short benefits with a check mark, no boxes */
+.usp-row { display: flex; gap: 36px; flex-wrap: wrap; margin-top: 32px; font-family: var(--font-body); font-size: var(--small-size); }
+.usp-row span::before { content: "✓"; margin-right: 10px; color: var(--brand-primary); font-weight: 700; }
+.on-photo .usp-row span::before { color: inherit; }
+html[data-size="vt"] .usp-row { flex-direction: column; gap: 18px; }
+
+/* Split layout: photo on one side, copy on a brand-colour side */
+.split { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; }
+html[data-size="vt"] .split { grid-template-columns: 1fr; grid-template-rows: 55% 45%; }
+.split .side-photo { position: relative; overflow: hidden; }
+.split .side-copy { background: var(--brand-secondary); padding: var(--pad); display: flex; flex-direction: column; justify-content: center; }
+html[data-size="vt"] .split .side-copy { padding-bottom: var(--safe-bottom); justify-content: flex-start; padding-top: 64px; }
+
+/* Native-looking cards: review / quote / message, placed over a photo or a plain background */
+.card { background: #fff; color: #1c1c1c; border-radius: 28px; padding: 44px 48px; box-shadow: 0 12px 40px rgba(0,0,0,.18); font-family: var(--font-body); }
+.card .quote { font-size: 40px; line-height: 1.3; }
+.card .who { margin-top: 24px; font-size: 26px; color: #666; }
+.card .stars { font-size: 34px; display: block; margin-bottom: 18px; }
+
+/* Before / after: two real photos side by side (stacked in VT) */
+.ba { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; background: #fff; }
+html[data-size="vt"] .ba { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; padding-bottom: calc(var(--safe-bottom) - 120px); }
+.ba figure { position: relative; overflow: hidden; }
+.ba figcaption { position: absolute; top: 28px; left: 28px; z-index: 2; background: rgba(0,0,0,.6); color: #fff; font-family: var(--font-body); font-size: 26px; padding: 10px 20px; border-radius: 999px; }
+
+/* ---------------------------------------------------------------------------
+   Creative concept patterns: native-looking formats drawn in CSS.
+   Pictures of a thing, never working UI: no play/close buttons, unread
+   counters, red badges or tappable stickers (Meta rejects fake functionality).
+   Never a real platform's or publication's name or logo.
+   --------------------------------------------------------------------------- */
+
+/* Shared: a column for a native element over a photo or plain background */
+.native { position: absolute; z-index: 2; left: var(--pad); right: var(--pad); top: 50%; transform: translateY(-50%); font-family: var(--font-body); }
+.native.top { top: calc(var(--pad) + 110px); transform: none; }
+html[data-size="vt"] .native { top: 44%; }
+html[data-size="hz"] .native { left: auto; right: var(--pad); width: calc(var(--w) * .46); }
+
+/* Chat conversation (generic messenger look) */
+.chat { display: flex; flex-direction: column; gap: 18px; }
+.chat .chat-head { display: flex; align-items: center; gap: 18px; font-size: 30px; font-weight: 600; color: #1c1c1c; background: #fff; border-radius: 24px; padding: 18px 26px; }
+.chat .chat-head img { width: 56px; height: 56px; border-radius: 50%; object-fit: contain; background: #fff; }
+.bubble { max-width: 78%; font-size: 36px; line-height: 1.3; padding: 22px 28px; border-radius: 30px; box-shadow: 0 6px 20px rgba(0,0,0,.12); }
+.bubble.in { align-self: flex-start; background: #fff; color: #1c1c1c; border-bottom-left-radius: 8px; }
+.bubble.out { align-self: flex-end; background: var(--chat-out, #d9fdd3); color: #1c1c1c; border-bottom-right-radius: 8px; }
+.bubble .time { display: block; margin-top: 8px; font-size: 22px; color: #7a7a7a; text-align: right; }
+
+/* Phone note: paper card with a title and lines of text */
+.note { background: #fffdf6; color: #222; border-radius: 28px; padding: 48px 52px; box-shadow: 0 14px 44px rgba(0,0,0,.2); }
+.note .note-date { font-size: 24px; color: #9a9a9a; text-align: center; margin-bottom: 22px; }
+.note .note-title { font-weight: 700; font-size: 46px; margin-bottom: 20px; }
+.note p, .note li { font-size: 36px; line-height: 1.42; }
+.note ul { padding-left: 1.1em; }
+
+/* Search: a query bar and the first result (no search-engine logo) */
+.search-bar { display: flex; align-items: center; gap: 20px; background: #fff; color: #202124; border-radius: 999px; padding: 26px 36px; font-size: 36px; box-shadow: 0 6px 24px rgba(0,0,0,.18); }
+.search-bar::before { content: ""; width: 30px; height: 30px; border: 4px solid #7a7a7a; border-radius: 50%; flex: none; }
+.search-result { margin-top: 26px; background: #fff; color: #202124; border-radius: 24px; padding: 32px 38px; font-size: 30px; line-height: 1.4; box-shadow: 0 6px 24px rgba(0,0,0,.12); }
+.search-result .site { font-size: 24px; color: #4d5156; }
+.search-result .title { font-size: 38px; color: #1a0dab; margin: 6px 0 10px; }
+
+/* News article: generic masthead (the client's name or a plain section word, never a real paper) */
+.news { position: absolute; inset: 0; background: #fff; color: #111; display: flex; flex-direction: column; }
+.news .masthead { padding: 36px var(--pad) 22px; border-bottom: 3px solid #111; font-family: var(--font-headline); font-size: 44px; letter-spacing: .02em; }
+.news .kicker { margin: 30px var(--pad) 0; font-size: 26px; font-weight: 700; text-transform: uppercase; color: var(--brand-primary); letter-spacing: .06em; }
+.news .news-headline { margin: 12px var(--pad) 0; font-family: var(--font-headline); font-size: calc(var(--headline-size) * .82); line-height: 1.06; }
+.news .news-photo { position: relative; flex: 1; margin: 30px var(--pad) var(--safe-bottom); overflow: hidden; }
+html[data-size="hz"] .news { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto 1fr; }
+html[data-size="hz"] .news .masthead { grid-column: 1 / -1; }
+html[data-size="hz"] .news .news-photo { grid-column: 2; grid-row: 2 / 4; margin: 30px var(--pad) var(--pad) 0; }
+
+/* Checklist: done items with a check, open items with a dash (no empty tappable boxes) */
+.checklist { list-style: none; display: flex; flex-direction: column; gap: 22px; font-size: 38px; line-height: 1.25; }
+.checklist li { display: flex; gap: 20px; align-items: baseline; }
+.checklist li::before { content: "✓"; flex: none; width: 1.1em; font-weight: 700; color: var(--brand-primary); }
+.checklist li.open::before { content: "–"; color: #9a9a9a; }
+.on-photo .checklist li::before { color: inherit; }
+
+/* Sticky note / handwritten paper. --font-hand is optional in brand.css (the one allowed extra font) */
+.sticky { width: 640px; max-width: 100%; aspect-ratio: 1; background: #ffe680; color: #2b2b2b; padding: 64px 56px; box-shadow: 0 18px 40px rgba(0,0,0,.25); transform: rotate(-2.5deg); font-family: var(--font-hand, var(--font-body)); font-size: 54px; line-height: 1.25; display: flex; align-items: center; }
+.paper { background: #fbfaf6; color: #2b2b2b; padding: 60px 64px; box-shadow: 0 14px 40px rgba(0,0,0,.2); font-family: var(--font-hand, var(--font-body)); font-size: 50px; line-height: 72px; background-image: repeating-linear-gradient(transparent 0 70px, rgba(60,90,160,.18) 70px 72px); }
+
+/* Phone notification: one card, the client's logo as the icon, no unread counter */
+.notif { display: flex; gap: 24px; background: rgba(255,255,255,.94); color: #111; border-radius: 34px; padding: 30px 34px; box-shadow: 0 10px 34px rgba(0,0,0,.22); }
+.notif img { width: 76px; height: 76px; border-radius: 18px; object-fit: contain; background: #fff; flex: none; }
+.notif .notif-app { font-size: 24px; color: #6b6b6b; display: flex; justify-content: space-between; }
+.notif .notif-title { font-size: 32px; font-weight: 700; margin-top: 4px; }
+.notif .notif-text { font-size: 30px; line-height: 1.3; margin-top: 4px; }
+
+/* Calendar reminder: date block + event text */
+.calendar { display: flex; gap: 30px; align-items: center; background: #fff; color: #111; border-radius: 30px; padding: 34px 40px; box-shadow: 0 10px 34px rgba(0,0,0,.2); }
+.calendar .cal-date { flex: none; width: 150px; text-align: center; border-radius: 20px; overflow: hidden; border: 2px solid #e4e4e4; }
+.calendar .cal-month { background: var(--brand-primary); color: #fff; font-size: 26px; padding: 8px 0; text-transform: uppercase; }
+.calendar .cal-day { font-size: 72px; font-weight: 700; padding: 6px 0 10px; }
+.calendar .cal-title { font-size: 38px; font-weight: 700; }
+.calendar .cal-when { font-size: 28px; color: #6b6b6b; margin-top: 6px; }
+
+/* Comparison / spreadsheet: a simple table, the client's column highlighted */
+.compare { width: 100%; border-collapse: collapse; background: #fff; color: #1c1c1c; font-size: 32px; border-radius: 24px; overflow: hidden; box-shadow: 0 10px 34px rgba(0,0,0,.16); }
+.compare th, .compare td { padding: 22px 26px; text-align: left; border-bottom: 2px solid #eee; }
+.compare th { font-size: 26px; text-transform: uppercase; letter-spacing: .04em; color: #6b6b6b; }
+.compare .ours { background: color-mix(in srgb, var(--brand-primary) 12%, #fff); font-weight: 700; }
+
+/* Data visualisation: horizontal bars (values from context/ only); set --v per bar */
+.bars { display: flex; flex-direction: column; gap: 26px; }
+.bars .bar { display: grid; gap: 10px; font-size: 30px; }
+.bars .bar-track { height: 54px; background: rgba(0,0,0,.08); border-radius: 12px; overflow: hidden; }
+.bars .bar-fill { height: 100%; width: var(--v, 50%); background: var(--brand-primary); border-radius: 12px; }
+.bars .bar.muted .bar-fill { background: #9a9a9a; }
+
+/* Poll (IG poll look) drawn as results with percentages, never as a tappable sticker; set --v per option */
+.poll { background: #fff; color: #111; border-radius: 30px; padding: 36px; box-shadow: 0 10px 34px rgba(0,0,0,.2); }
+.poll .poll-q { font-size: 38px; font-weight: 700; text-align: center; margin-bottom: 24px; }
+.poll .poll-opt { position: relative; border-radius: 18px; background: #f0f0f0; padding: 22px 28px; font-size: 32px; margin-top: 14px; overflow: hidden; display: flex; justify-content: space-between; }
+.poll .poll-opt::before { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--v, 50%); background: color-mix(in srgb, var(--brand-primary) 22%, transparent); }
+.poll .poll-opt > * { position: relative; }

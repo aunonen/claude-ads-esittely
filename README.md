@@ -1,6 +1,6 @@
 # Meta Ads Creative Workspace for Claude Code
 
-> **Esittelyversio.** Tämä on julkinen kopio yhden hengen Meta-mainostoimiston Claude Code -työtilasta. Asiakkaiden kansiot, Google Drive -tunnisteet, yhteystiedot ja kolmansien osapuolten mainoskuvat on poistettu. Esimerkkiasiakkaana on toimiston oma työtila (`clients/own business/`), ja `sites/meta-mainonta/` sisältää toimiston laskeutumissivun. Varsinaiset taidot (skills) ovat erillisessä repossa (`~/.claude/skills/`).
+> **Esittelyversio.** Tämä on julkinen kopio yhden hengen Meta-mainostoimiston Claude Code -työtilasta. Asiakkaiden kansiot, Google Drive -tunnisteet, yhteystiedot ja kolmansien osapuolten mainoskuvat on poistettu. Esimerkkiasiakkaana on toimiston oma työtila (`clients/own business/`), ja `sites/meta-mainonta/` sisältää toimiston laskeutumissivun. Varsinaiset taidot ja komennot ovat kansiossa `claude-skills/` (käytössä ne asennetaan kansioon `~/.claude/`). Anthropicin valmiit `skill-creator`- ja `mcp-integration`-taidot on jätetty pois.
 
 **Agency edition:** one workspace per client, with the pipeline shared across all of them. See *Agency setup* below.
 
